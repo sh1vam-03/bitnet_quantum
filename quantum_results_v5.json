@@ -1,0 +1,52 @@
+{
+  "experiment": "BitNet Quantum-Assisted Critical Weight Search",
+  "version": "v5",
+  "author": "Sh1vam",
+  "date": "2026",
+  "strategy": "True hybrid: quantum optimizes only critical weights",
+  "backend": "ibm_torino",
+  "qubits_used": 16,
+  "shots": 4096,
+  "pipeline": {
+    "step1_classical_pretrain": {
+      "acc": 0.568,
+      "loss": 0.6931
+    },
+    "step2_critical_weights": {
+      "n_critical": 16,
+      "method": "gradient magnitude"
+    },
+    "step3_quantum_search": {
+      "acc": 0.592,
+      "loss": 0.7038,
+      "rounds": [
+        {
+          "round": 1,
+          "best_acc": 0.546,
+          "best_loss": 0.7121457815809366,
+          "avg_acc": 0.5023258426966293,
+          "unique_states": 178,
+          "qpu_time_sec": 12.312920570373535,
+          "job_id": "d6qq8t3opkic73fici4g"
+        },
+        {
+          "round": 2,
+          "best_acc": 0.592,
+          "best_loss": 0.7037908749154106,
+          "avg_acc": 0.5143819642394403,
+          "unique_states": 3859,
+          "qpu_time_sec": 9.429973840713501,
+          "job_id": "d6qq90fr88ds73dcnjtg"
+        }
+      ]
+    },
+    "step4_classical_finetune": {
+      "acc": 0.596,
+      "loss": 0.702
+    }
+  },
+  "classical_only_baseline": {
+    "acc": 0.568,
+    "loss": 0.6931
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "experiment": "BitNet Quantum Weight Search v4",
+  "author": "Sh1vam",
+  "date": "2026",
+  "version": "v4",
+  "fixes": [
+    "Phase centering: subtract mean \u2192 balanced phases",
+    "Independent weight seeds: no tiling correlation",
+    "Magnitude threshold: ~33% zero weights",
+    "Bounded phase update: clip to [-\u03c0/2, \u03c0/2]"
+  ],
+  "backend": "ibm_torino",
+  "qubits_used": 16,
+  "shots": 4096,
+  "classical_gradient": {
+    "accuracy": 0.568,
+    "loss": 0.6931
+  },
+  "quantum_ibm_qpu": {
+    "accuracy": 0.504,
+    "loss": 0.6931,
+    "rounds": [
+      {
+        "round": 1,
+        "best_acc": 0.504,
+        "best_loss": 0.6931471805599454,
+        "avg_acc": 0.49612449255751023,
+        "unique_states": 739,
+        "qpu_time_sec": 11.576245069503784,
+        "job_id": "d6qpesnr88ds73dcmnkg",
+        "weight_dist": {
+          "+1_pct": 0.0,
+          "0_pct": 30.88235294117647,
+          "-1_pct": 69.11764705882352
+        }
+      },
+      {
+        "round": 2,
+        "best_acc": 0.504,
+        "best_loss": 0.6931471805599454,
+        "avg_acc": 0.49601074168797976,
+        "unique_states": 3910,
+        "qpu_time_sec": 9.776287317276001,
+        "job_id": "d6qpevjopkic73fibmrg",
+        "weight_dist": {
+          "+1_pct": 4.044117647058823,
+          "0_pct": 30.88235294117647,
+          "-1_pct": 65.07352941176471
+        }
+      }
+    ]
+  },
+  "classical_random": {
+    "accuracy": 0.584,
+    "loss": 1.1324
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "experiment": "BitNet Quantum Weight Search v3",
+  "author": "Sh1vam",
+  "date": "2026",
+  "version": "v3",
+  "improvements": [
+    "1 qubit per weight (not 2)",
+    "4096 shots (not 1024)",
+    "QAOA 2-round iterative circuit",
+    "Gradient-informed phase encoding",
+    "Larger model 16x16x1 (272 weights)"
+  ],
+  "backend": "ibm_torino",
+  "qubits_used": 16,
+  "shots": 4096,
+  "classical_gradient": {
+    "accuracy": 0.568,
+    "loss": 0.6931
+  },
+  "quantum_ibm_qpu": {
+    "accuracy": 0.496,
+    "loss": 7.5408,
+    "rounds": [
+      {
+        "round": 1,
+        "best_acc": 0.496,
+        "best_loss": 7.540836923664209,
+        "avg_acc": 0.49600000000000016,
+        "unique_states": 1698,
+        "qpu_time": 10.416406869888306,
+        "job_id": "d6qp5m3opkic73fibd0g"
+      },
+      {
+        "round": 2,
+        "best_acc": 0.496,
+        "best_loss": 7.540836923664209,
+        "avg_acc": 0.4960000000000002,
+        "unique_states": 3695,
+        "qpu_time": 11.062960147857666,
+        "job_id": "d6qp5oq0q0ls73cska40"
+      }
+    ]
+  },
+  "classical_random": {
+    "accuracy": 0.584,
+    "loss": 1.1324
+  }
+}

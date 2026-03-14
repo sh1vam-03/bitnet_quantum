@@ -1,0 +1,22 @@
+{
+  "experiment": "BitNet Quantum Weight Search",
+  "author": "Sh1vam",
+  "date": "2026",
+  "backend": "ibm_torino",
+  "qubits_used": 16,
+  "shots": 1024,
+  "classical_gradient": {
+    "accuracy": 0.49,
+    "loss": 0.6934
+  },
+  "quantum_ibm_qpu": {
+    "accuracy": 0.51,
+    "loss": 0.6931,
+    "qpu_time_sec": 12.49,
+    "unique_states": 769
+  },
+  "classical_random": {
+    "accuracy": 0.625,
+    "loss": 1.0719
+  }
+}

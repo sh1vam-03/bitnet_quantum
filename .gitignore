@@ -1,0 +1,14 @@
+# Ignore local secret environment config
+.env
+.env.local
+# .env.*
+
+# Ignore generated experiment result data
+# quantum_results_*.json
+
+# Ignore Python virtual env folders
+.venv*
+
+# Keep primary code tracked, but if this file is used as a scratch copy
+bitnet_quantum_v6.py
+quantum_results_v6.json
